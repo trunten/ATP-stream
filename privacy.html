@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b111b">
+  <meta name="description" content="How ATP Recorder uses Google Drive authorisation, keeps credentials private, and manages recordings.">
+  <title>Privacy policy — ATP Recorder</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-shell inner">
+      <a class="brand" href="./" aria-label="ATP Recorder homepage">
+        <span class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+        <span>ATP Recorder</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="./">About</a>
+        <a href="./privacy.html" aria-current="page">Privacy policy</a>
+        <a href="https://github.com/trunten/ATP-stream" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" class="site-shell">
+    <section class="page-hero">
+      <p class="eyebrow">Transparency and data use</p>
+      <h1>Privacy <span class="highlight">policy.</span></h1>
+      <p class="lead">A plain-language explanation of how this personal-use utility handles Google Drive access, temporary recordings and credentials.</p>
+      <p class="date">Last updated: 24 October 2026</p>
+    </section>
+
+    <article class="prose">
+      <div class="inline-note">
+        <p><strong>At a glance:</strong> ATP Recorder is a personal utility, not a public service. It is designed to record an audio livestream and upload the result to the owner's chosen Google Drive folder. It does not sell Google user data, collect advertising profiles or ask visitors to sign in on this website.</p>
+      </div>
+
+      <h2>1. Who operates this application?</h2>
+      <p>
+        ATP Recorder is an independent personal-use project maintained by the owner of
+        <a href="https://github.com/trunten/ATP-stream">this GitHub repository</a>.
+        It is not affiliated with the Accidental Tech Podcast, its hosts or producers.
+        It is not offered as a service to the public.
+      </p>
+
+      <h2>2. Information the recorder accesses</h2>
+      <p>The recorder is designed to use:</p>
+      <ul>
+        <li><strong>Public stream information:</strong> ATP's livestream status and audio stream, to determine when to record and to capture the broadcast.</li>
+        <li><strong>Google Drive authorisation:</strong> an OAuth access/refresh token that allows the recorder to communicate with Google Drive on the owner's behalf.</li>
+        <li><strong>Google Drive files:</strong> it creates and uploads recorded audio files in the folder selected by the owner. It may check the destination or upload outcome to confirm a transfer.</li>
+        <li><strong>Operational details:</strong> timestamps, recording file names and success/failure information used for troubleshooting and retrying failed uploads.</li>
+      </ul>
+      <p>
+        <strong>Scope disclosure:</strong> the rclone configuration used by this project may
+        request broad Google Drive read/write permission. Although uploads are targeted to one
+        selected folder, that folder setting does not itself limit the underlying OAuth
+        permission. The recorder is intended not to browse, modify, copy or delete unrelated
+        Google Drive files.
+      </p>
+
+      <h2>3. How information is used</h2>
+      <p>
+        Google Drive access is used only to support the requested personal recording workflow:
+        transferring completed livestream recordings to the owner's Drive folder, confirming
+        uploads, and recovering from upload errors. Google user data is not used for advertising,
+        profiling, resale, model training or unrelated purposes.
+      </p>
+
+      <h2>4. Storage, security and retention</h2>
+      <ul>
+        <li>Recorded audio may be held temporarily on the recorder's hosting environment before transfer. After a successful transfer, the recorder is designed to remove the local recording.</li>
+        <li>Uploaded recordings remain in the owner's Google Drive until the owner deletes them or changes their storage arrangement.</li>
+        <li>Google OAuth credentials are stored in a private rclone configuration and, for unattended hosting, as a private hosting environment variable. They are not included in this website's files or the public GitHub repository.</li>
+        <li>Temporary failed uploads may remain on the host until retried or until the host's temporary storage is cleared. Hosting logs may retain basic operational details according to the host's retention practices.</li>
+      </ul>
+      <p>
+        The intended recorder host is a third-party hosting provider, currently Hostless,
+        and Google Drive provides the destination storage. Those services necessarily process
+        the information required to operate the recorder and are governed by their own policies.
+        No system can guarantee absolute security.
+      </p>
+
+      <h2>5. Data sharing</h2>
+      <p>
+        ATP Recorder does not sell, rent or intentionally disclose Google account information or
+        Drive contents to advertisers or data brokers. Data is processed by the hosting provider
+        and Google Drive only as necessary to run the owner's authorised recording and upload
+        workflow, or where legally required. It does not provide other users with access to the
+        owner's Google Drive or private recordings.
+      </p>
+
+      <h2>6. This website</h2>
+      <p>
+        This informational website contains no Google sign-in functionality, custom analytics,
+        advertising tags or tracking cookies. It does not collect names, email addresses or form
+        submissions. GitHub Pages, which hosts the site, may process standard connection data
+        under <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub's privacy statement</a>.
+      </p>
+
+      <h2>7. Control and deletion</h2>
+      <p>
+        The owner can delete recordings directly from Google Drive and can revoke the app's
+        Google account access through
+        <a href="https://myaccount.google.com/connections">Google Account → Third-party connections</a>.
+        Revoking access prevents future authorised Drive uploads until access is granted again.
+        The owner can also remove the stored hosting credential and stop the recorder.
+      </p>
+
+      <h2>8. Google API data-use policy</h2>
+      <p>
+        Use of information received from Google APIs is intended to comply with the
+        <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+        including its Limited Use requirements. Google Drive information is used only for the
+        functionality described in this policy.
+      </p>
+
+      <h2>9. Changes and contact</h2>
+      <p>
+        This policy may be updated if the recording workflow or its handling of Google data
+        changes. The latest text and revision date will be published here.
+        To contact the maintainer, visit the
+        <a href="https://github.com/trunten">project owner's GitHub profile</a>.
+        Do not post passwords or OAuth tokens in public GitHub discussions.
+      </p>
+    </article>
+  </main>
+  <footer class="site-footer">
+    <div class="site-shell inner">
+      <small>
+        © 2026 ATP Recorder — personal project. Not an official Accidental Tech Podcast product.
+      </small>
+      <div class="footer-links">
+        <a href="./">Homepage</a>
+        <a href="https://github.com/trunten/ATP-stream" target="_blank" rel="noopener noreferrer">Source code ↗</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

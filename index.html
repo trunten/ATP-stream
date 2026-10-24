@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b111b">
+  <meta name="description" content="ATP Recorder is an independent personal-use utility designed to capture live podcast audio and archive the recording in its owner's Google Drive.">
+  <meta property="og:title" content="ATP Recorder — personal live audio archive">
+  <meta property="og:description" content="An independent, personal-use live-stream recording utility.">
+  <meta property="og:type" content="website">
+  <title>ATP Recorder — Personal live audio archive</title>
+  <link rel="stylesheet" href="./assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <div class="site-shell inner">
+      <a class="brand" href="./" aria-label="ATP Recorder homepage">
+        <span class="brand-symbol" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i></span>
+        <span>ATP Recorder</span>
+      </a>
+      <nav class="site-nav" aria-label="Main navigation">
+        <a href="./" aria-current="page">About</a>
+        <a href="./privacy.html">Privacy policy</a>
+        <a href="https://github.com/trunten/ATP-stream" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
+      </nav>
+    </div>
+  </header>
+  <main id="main" class="site-shell">
+    <section class="hero" aria-labelledby="hero-title">
+      <span class="eyebrow">Independent personal-use utility</span>
+      <h1 id="hero-title">A home for the <span class="highlight">live moments.</span></h1>
+      <p class="lead">
+        ATP Recorder is a small personal project designed to monitor the Accidental Tech Podcast
+        livestream, capture the audio when a broadcast is live, and save the finished recording
+        in the owner's Google Drive.
+      </p>
+      <div class="actions">
+        <a class="button primary" href="./privacy.html">How Google Drive data is used <span aria-hidden="true">↗</span></a>
+        <a class="button" href="https://github.com/trunten/ATP-stream" target="_blank" rel="noopener noreferrer">View the project on GitHub <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="workflow-heading">
+      <p class="section-label">The idea</p>
+      <h2 id="workflow-heading">Designed to run quietly in the background.</h2>
+      <p class="section-intro">One job: keep a personal archive of the live broadcast, without needing to stay awake or leave a laptop switched on.</p>
+      <div class="cards">
+        <article class="card">
+          <span class="card-number" aria-hidden="true">01</span>
+          <h3>Detect the livestream</h3>
+          <p>Periodically checks ATP's public livestream status to see whether audio is available.</p>
+        </article>
+        <article class="card">
+          <span class="card-number" aria-hidden="true">02</span>
+          <h3>Capture the audio</h3>
+          <p>When configured and authorised, a background recorder captures the live audio for later listening.</p>
+        </article>
+        <article class="card">
+          <span class="card-number" aria-hidden="true">03</span>
+          <h3>Archive to Google Drive</h3>
+          <p>Saves recordings to a folder selected by the owner, so they can be played on a phone or tablet.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="permissions-heading">
+      <p class="section-label">Google Drive access</p>
+      <h2 id="permissions-heading">Permission for one practical purpose.</h2>
+      <p class="section-intro">
+        Google authorisation is used by the recorder to create and upload files in the owner's
+        chosen Drive folder. The underlying rclone connection may request broad Google Drive
+        permissions even though the recorder is configured to use only that folder. Google
+        credentials are not entered on this website.
+      </p>
+      <div class="notice">
+        <div>
+          <h3>Private by design, personal by purpose.</h3>
+          <p>This is an informational website, not a sign-in page. The recorder is intended for the owner's use, is not a publicly available recording service, and does not sell or advertise using Google account data. Read the <a href="./privacy.html">privacy policy</a> for details.</p>
+        </div>
+        <a class="button primary" href="./privacy.html">Read privacy policy <span aria-hidden="true">↗</span></a>
+      </div>
+    </section>
+
+    <section class="section" aria-labelledby="status-heading">
+      <p class="section-label">Project status</p>
+      <h2 id="status-heading">An evolving personal project.</h2>
+      <p class="section-intro">
+        The livestream status monitor has been deployed separately; the automatic recording
+        and Google Drive upload components are being configured. This page does not start
+        recordings, sign users in, or request access to any Google account.
+      </p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <div class="site-shell inner">
+      <small>
+        © 2026 ATP Recorder — personal project. Not an official Accidental Tech Podcast product and
+        not affiliated with the podcast, its hosts or producers. Recording and listening remain
+        subject to applicable rights and permissions.
+      </small>
+      <div class="footer-links">
+        <a href="./privacy.html">Privacy policy</a>
+        <a href="https://github.com/trunten/ATP-stream" target="_blank" rel="noopener noreferrer">Source code ↗</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
